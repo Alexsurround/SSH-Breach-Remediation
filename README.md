@@ -6,7 +6,7 @@ This document describes a real-world SSH breach incident on Debian 10 and provid
 
 ### Attack Summary
 - **Target**: Debian 10 server with user `kodi`
-- **Entry Point**: MikroTik router with dst-nat rule exposing SSH port 22 to the internet
+- **Entry Point**: MikroTik router with dst-nat rule exposing SSH port 2223 to the internet
 - **Attack Method**: Automated botnet password brute-force
 - **Malware**: Cryptocurrency miner disguised as `kauditd0` (legitimate kernel process name)
 - **Attack Sources**: Multiple IPs from Netherlands, Germany, China, Russia
