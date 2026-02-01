@@ -827,6 +827,7 @@ sudo apt upgrade
 } > ~/load_analysis.txt
 
 cat ~/load_analysis.txt
+```
 ---
 
 ## 🆘 Контакты для помощи
