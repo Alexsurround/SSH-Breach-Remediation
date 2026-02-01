@@ -805,7 +805,28 @@ sudo apt upgrade
 - [ ] unattended-upgrades настроен
 - [ ] Актуальная версия Debian (11 или 12)
 - [ ] Регулярный apt update && apt upgrade
+```bash      
+{
+  echo "=== CURRENT LOAD ==="
+  uptime
+  echo ""
+  echo "=== TOP 5 CPU RIGHT NOW ==="
+  ps aux --sort=-%cpu | head -6
+  echo ""
+  echo "=== CLAMAV STATUS ==="
+  systemctl status clamav-daemon --no-pager -l
+  echo ""
+  echo "=== RECENT APT ACTIVITY ==="
+  grep "$(date +%Y-%m-%d)" /var/log/dpkg.log | tail -20
+  echo ""
+  echo "=== ACTIVE TIMERS ==="
+  systemctl list-timers --no-pager
+  echo ""
+  echo "=== IOWAIT ==="
+  vmstat 1 3
+} > ~/load_analysis.txt
 
+cat ~/load_analysis.txt
 ---
 
 ## 🆘 Контакты для помощи
